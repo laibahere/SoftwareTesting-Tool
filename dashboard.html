@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Bug Submission Tool</title>
+</head>
+
+<body>
+    <h1>Bug Submission </h1>
+    <form autocomplete="off" onsubmit="onFormSubmit(event)">
+        <div>
+            <label for="bugTitle">Bug Title</label>
+            <input
+                type="text"
+                name="bugTitle"
+                id="bugTitle"
+                placeholder="Enter a short title for the bug"
+                required
+            />
+        </div>
+        <div>
+            <label for="bugDescription">Bug Description</label>
+            <textarea
+                name="bugDescription"
+                id="bugDescription"
+                placeholder="Describe the bug in detail"
+                rows="5"
+                required
+            ></textarea>
+        </div>
+        <div>
+            <label for="stepsToReproduce">Steps to Reproduce</label>
+            <textarea
+                name="stepsToReproduce"
+                id="stepsToReproduce"
+                placeholder="List the steps to reproduce the bug"
+                rows="5"
+            ></textarea>
+        </div>
+        <div>
+            <label for="expectedBehavior">Expected Behavior</label>
+            <textarea
+                name="expectedBehavior"
+                id="expectedBehavior"
+                placeholder="Describe the expected behavior"
+                rows="5"
+            ></textarea>
+        </div>
+        <div>
+            <label for="browser">Browser</label>
+            <input
+                type="text"
+                name="browser"
+                id="browser"
+                placeholder="Which browser was used?"
+            />
+        </div>
+        <div>
+            <label for="bugSeverity">Bug Severity</label>
+            <select name="bugSeverity" id="bugSeverity">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+        <div class="form_action--button">
+            <input type="submit" value="Submit Bug Report" />
+            <input type="reset" value="Reset" />
+        </div>
+    </form>
+
+    <h2>Submitted Bugs</h2>
+    <table class="list" id="bugList">
+        <thead>
+            <tr>
+                <th>Bug Title</th>
+                <th>Bug Description</th>
+                <th>Severity</th>
+                <th>Browser</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Bug entries will appear here -->
+        </tbody>
+    </table>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
