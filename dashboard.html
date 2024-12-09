@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Test Case Dashboard</title>
+</head>
+
+<body>
+    <h1>Test Case Management Dashboard</h1>
+    <form autocomplete="off" onsubmit="onFormSubmit(event)">
+        <div>
+            <label for="testCaseTitle">Test Case Title</label>
+            <input type="text" id="testCaseTitle" placeholder="Enter test case title" required>
+        </div>
+        <div>
+            <label for="testCaseStatus">Status</label>
+            <select id="testCaseStatus">
+                <option value="open">Open</option>
+                <option value="closed">Closed</option>
+                <option value="failed">Failed</option>
+                <option value="passed">Passed</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Add Test Case">
+        </div>
+    </form>
+
+    <h2>Test Case Summary</h2>
+    <div id="summary">
+        <p>Total Test Cases: <span id="totalCount">0</span></p>
+        <p>Open: <span id="openCount">0</span></p>
+        <p>Closed: <span id="closedCount">0</span></p>
+        <p>Failed: <span id="failedCount">0</span></p>
+        <p>Passed: <span id="passedCount">0</span></p>
+    </div>
+
+    <h2>Test Case List</h2>
+    <table id="testCaseTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Test cases will be dynamically added here -->
+        </tbody>
+    </table>
+    <button onclick="downloadReport('pdf')">Download as PDF</button>
+    <button onclick="downloadReport('excel')">Download as Excel</button>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
