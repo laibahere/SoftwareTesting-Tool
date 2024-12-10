@@ -5,54 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
-    <title>Test Case Dashboard</title>
+    <title>Bug Submission Tool</title>
 </head>
 
 <body>
-    <h1>Test Case Management Dashboard</h1>
+    <h1>Bug Submission </h1>
     <form autocomplete="off" onsubmit="onFormSubmit(event)">
         <div>
-            <label for="testCaseTitle">Test Case Title</label>
-            <input type="text" id="testCaseTitle" placeholder="Enter test case title" required>
+            <label for="bugTitle">Bug Title</label>
+            <input
+                type="text"
+                name="bugTitle"
+                id="bugTitle"
+                placeholder="Enter a short title for the bug"
+                required
+            />
         </div>
         <div>
-            <label for="testCaseStatus">Status</label>
-            <select id="testCaseStatus">
-                <option value="open">Open</option>
-                <option value="closed">Closed</option>
-                <option value="failed">Failed</option>
-                <option value="passed">Passed</option>
+            <label for="bugDescription">Bug Description</label>
+            <textarea
+                name="bugDescription"
+                id="bugDescription"
+                placeholder="Describe the bug in detail"
+                rows="5"
+                required
+            ></textarea>
+        </div>
+        <div>
+            <label for="stepsToReproduce">Steps to Reproduce</label>
+            <textarea
+                name="stepsToReproduce"
+                id="stepsToReproduce"
+                placeholder="List the steps to reproduce the bug"
+                rows="5"
+            ></textarea>
+        </div>
+        <div>
+            <label for="expectedBehavior">Expected Behavior</label>
+            <textarea
+                name="expectedBehavior"
+                id="expectedBehavior"
+                placeholder="Describe the expected behavior"
+                rows="5"
+            ></textarea>
+        </div>
+        <div>
+            <label for="browser">Browser</label>
+            <input
+                type="text"
+                name="browser"
+                id="browser"
+                placeholder="Which browser was used?"
+            />
+        </div>
+        <div>
+            <label for="bugSeverity">Bug Severity</label>
+            <select name="bugSeverity" id="bugSeverity">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
             </select>
         </div>
-        <div>
-            <input type="submit" value="Add Test Case">
+        <div class="form_action--button">
+            <input type="submit" value="Submit Bug Report" />
+            <input type="reset" value="Reset" />
         </div>
     </form>
 
-    <h2>Test Case Summary</h2>
-    <div id="summary">
-        <p>Total Test Cases: <span id="totalCount">0</span></p>
-        <p>Open: <span id="openCount">0</span></p>
-        <p>Closed: <span id="closedCount">0</span></p>
-        <p>Failed: <span id="failedCount">0</span></p>
-        <p>Passed: <span id="passedCount">0</span></p>
-    </div>
-
-    <h2>Test Case List</h2>
-    <table id="testCaseTable">
+    <h2>Submitted Bugs</h2>
+    <table class="list" id="bugList">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Bug Title</th>
+                <th>Bug Description</th>
+                <th>Severity</th>
+                <th>Browser</th>
             </tr>
         </thead>
         <tbody>
-            <!-- Test cases will be dynamically added here -->
+            <!-- Bug entries will appear here -->
         </tbody>
     </table>
-    <button onclick="downloadReport('pdf')">Download as PDF</button>
-    <button onclick="downloadReport('excel')">Download as Excel</button>
 
     <script src="dashboard.js"></script>
 </body>
