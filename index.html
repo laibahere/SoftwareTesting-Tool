@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Google Fonts for Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Aside Section Start (Sidebar Navigation Menu) -->
+        <aside>
+            <!-- Top Section of Sidebar (Logo and Close Button) -->
+            <div class="top">
+                <div class="logo"> 
+                    <!-- Dashboard Logo -->
+                    <h2>ALPHA <span class="danger">GROUP</span></h2>
+                </div> 
+                <!-- Close Button -->
+                <div class="close">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+            </div>
+            <!-- Sidebar Navigation Links -->
+            <div class="sidebar">
+                <!-- Active Link for Dashboard -->
+                <a href="a" class="active">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <!-- Link to User Page -->
+                <a href="user.html">
+                    <span class="material-symbols-outlined">person_outline</span>
+                    <h3>User</h3>
+                </a>
+                <!-- Link to Bug Form (CRUD) -->
+                <a href="crud.html">
+                    <span class="material-symbols-outlined">assignment</span>
+                    <h3>Bug Form</h3>
+                </a>
+                <!-- Link to Bug Report Page -->
+                <a href="bug-report.html">
+                    <span class="material-symbols-outlined">report</span>
+                    <h3>Bug Report</h3>
+                </a>
+                <!-- Link to Settings Page -->
+                <a href="a">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <!-- Link to Log Out -->
+                <a href="logout.html">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Log Out</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- Aside Section End -->
+
+
+        <!-- Main Section Start (Main Content Area) -->
+        <main>
+            <!-- Main Heading -->
+            <h1>Dashboard</h1>
+            <!-- Date Input -->
+            <div class="date">
+                <input type="date">
+            </div>
+            <!-- Recent Bugs Section -->
+            <div class="recent_bug">
+                <h2>Recent Bug</h2>
+                <!-- Bug Details Table -->
+                <table>
+                    <!-- Table Header -->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Severity</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <!-- Table Body -->
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td>Bug #1</td>
+                            <td>345</td>
+                            <td>High</td>
+                            <td class="primary">Inprogress</td>
+                            <td class="warning">Details</td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr>
+                            <td>Bug #2</td>
+                            <td>1234</td>
+                            <td>Critical</td>
+                            <td class="primary">Done</td>
+                            <td class="warning">Details</td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr>
+                            <td>Bug #3</td>
+                            <td>987</td>
+                            <td>Low</td>
+                            <td class="primary">Pending</td>
+                            <td class="warning">Details</td>
+                        </tr>
+                        <!-- Show More Button Row -->
+                        <tr class="show-more-row">
+                            <td colspan="5">
+                                <button class="show-more">Show More</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- Main Section End -->
+
+
+        <!-- Right Section Start (Profile and Theme Toggler) -->
+        <div class="right">
+            <!-- Top Bar -->
+            <div class="top">
+                <!-- Menu Button (For Mobile View Sidebar Toggle) -->
+                <button id="menu-bar">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <!-- Theme Toggler (Switch Between Light and Dark Mode) -->
+                <div class="theme-toggler">
+                    <span class="material-symbols-outlined active">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+                <!-- Profile Section -->
+                <div class="profile">
+                    <!-- Profile Info -->
+                    <div class="info">
+                        <p><b>Laiba</b></p>
+                        <p>Admin</p>
+                        <small class="text-muted"></small>
+                    </div>
+                    <!-- Profile Picture -->
+                    <div class="profile-pic">
+                        <img src="images (1).jfif" alt="doraemon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right Section End -->
+    </div>
+
+
+    <!-- Link to External JavaScript -->
+    <script src="index.js"></script>
+    
+</body>
+</html>

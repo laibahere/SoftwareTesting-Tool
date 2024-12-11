@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Dashboard - User</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <h1>User Management</h1>
+    <h2>Manage Users</h2>
+    
+    <!-- User Form to Add/Update -->
+    <form id="userForm">
+        <label for="userName">Username</label>
+        <input type="text" id="userName" name="userName" required placeholder="Enter username">
+        
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required placeholder="Enter email">
+        
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required placeholder="Enter phone number">
+        
+        <input type="submit" value="Add User">
+        <input type="reset" value="Reset">
+    </form>
+
+    <!-- User List (Table) -->
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <!-- Users will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script href="user.js"></script>
+</body>
+</html>
