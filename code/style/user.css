@@ -1,0 +1,241 @@
+/* Importing Google Fonts for the "Poppins" font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Root Variables: Define reusable color, spacing, and design properties */
+:root {
+    --clr-primary: #7380ec; /* Primary color */
+    --clr-danger: #ff7782; /* Red for danger or delete actions */
+    --clr-success: #41f1b6; /* Green for success or edit actions */
+    --clr-white: #fff; /* White color */
+    --clr-info-dark: #7d8da1; /* Dark gray for info text */
+    --clr-info-light: #dce1eb; /* Light gray for alternating table rows */
+    --clr-dark: #363949; /* Default dark text color */
+    --clr-warning: #ff4edc; /* Warning color */
+    --clr-light: rgba(132, 139, 200, 0.18); /* Light shadow color */
+    --clr-primary-variant: #111e88; /* Darker variant of primary color */
+    --clr-dark-variant: #677483; /* Dark gray variant */
+    --clr-color-background: #f6f6f9; /* Background color */
+
+    --card-border-radius: 2rem; /* Large border radius for cards */
+    --border-radius-1: 0.4rem; /* Small border radius */
+    --border-radius-2: 0.8rem; /* Medium border radius */
+    --border-radius-3: 1.2rem; /* Larger border radius */
+
+    --card-padding: 1.8rem; /* Card padding */
+    --padding-1: 1.2rem; /* General padding */
+    --box-shadow: 0 2rem 3rem var(--clr-light); /* Default shadow */
+}
+
+/* Dark Theme Variables */
+.dark-theme-variables {
+    --clr-color-background: #181a1e; /* Dark background */
+    --clr-white: #202528; /* Light gray for dark mode */
+    --clr-light: rgba(0, 0, 0, 0.4); /* Light overlay for dark mode */
+    --clr-dark: #edeffd; /* Off-white for text in dark mode */
+    --clr-dark-variant: #677483; /* Dark gray variant */
+    --box-shadow: 0 2rem 3rem var(--clr-light); /* Shadow for dark mode */
+}
+
+/* Global Reset for consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+}
+
+/* Body Styling */
+body {
+    font-family: "Poppins", sans-serif; /* Using the Poppins font */
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem; /* Default font size */
+    user-select: none; /* Disables text selection */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    background-color: var(--clr-color-background); /* Background color */
+    color: var(--clr-dark); /* Default text color */
+}
+
+/* Heading Styles */
+h1 {
+    font-weight: 800;
+    font-size: 1.6rem; /* Main heading size */
+    text-align: center;
+    margin: 20px 0; /* Vertical spacing */
+}
+
+h2 {
+    font-size: 1.4rem; /* Subheading size */
+    text-align: center;
+    margin: 10px 0 20px; /* Top and bottom spacing */
+}
+
+
+/* Form Container Styles */
+form {
+    background-color: var(--clr-white); /* Form background */
+    padding: 20px; /* Inner padding */
+    border-radius: 2rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Match table max width */
+    margin: 0 auto 30px; /* Center alignment with bottom spacing */
+}
+
+
+/* Form Labels */
+form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px; /* Spacing below labels */
+    color: var(--clr-dark-variant); /* Label text color */
+}
+
+/* Input Fields */
+form input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding */
+    margin-bottom: 20px; /* Spacing below fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Input text size */
+    color: var(--clr-dark); /* Input text color */
+}
+
+/* Submit and Reset Buttons */
+form input[type="submit"],
+form input[type="reset"] {
+    width: 48%; /* Each button takes half the width */
+    padding: 10px; /* Inner padding */
+    font-size: 1rem; /* Button text size */
+    font-weight: 500; /* Bold button text */
+    color: var(--clr-white); /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    margin-bottom: 10px; /* Bottom spacing */
+}
+
+/* Submit Button Colors */
+form input[type="submit"] {
+    background-color: var(--clr-primary); /* Primary color */
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--clr-primary-variant); /* Darker on hover */
+}
+
+/* Reset Button Colors */
+form input[type="reset"] {
+    background-color: var(--clr-dark-variant); /* Dark variant */
+}
+
+form input[type="reset"]:hover {
+    background-color: #5a6268; /* Slightly darker on hover */
+}
+
+/* Responsive Design for Form */
+@media (max-width: 500px) {
+    form {
+        padding: 15px; /* Reduced padding */
+    }
+
+    form input[type="submit"],
+    form input[type="reset"] {
+        width: 100%; /* Full-width buttons */
+        margin-bottom: 10px; /* Spacing between buttons */
+    }
+}
+
+/* Table Styling with Borders and Hover */
+table {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Max width for large screens */
+    margin: 0 auto 30px; /* Center alignment with bottom spacing */
+    border-collapse: collapse; /* Remove gaps between cells */
+    background-color: var(--clr-white); /* Table background */
+    border: 1px solid #ccc; /* Border around the table */
+}
+
+/* Table Header */
+table thead {
+    background-color: var(--clr-primary); /* Header background */
+    color: var(--clr-white); /* Header text color */
+}
+
+table th {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Inner padding */
+    font-weight: 500; /* Bold header text */
+    font-size: 1rem; /* Header font size */
+    border: 1px solid #ccc; /* Border for header cells */
+}
+
+/* Table Body Rows */
+table tbody tr {
+    border: 1px solid #ccc; /* Border for each row */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Alternate Row Background */
+table tbody tr:nth-child(even) {
+    background-color: var(--clr-info-light); /* Alternate row color */
+}
+
+/* Hover Effect */
+table tbody tr:hover {
+    background-color: var(--clr-light); /* Subtle highlight on hover */
+}
+
+/* Table Data Cells */
+table td {
+    padding: 12px; /* Inner padding */
+    font-size: 0.95rem; /* Text size */
+    color: var(--clr-dark-variant); /* Text color */
+    border: 1px solid #ccc; /* Border for table cells */
+}
+
+
+/* Action Buttons */
+button {
+    padding: 8px 12px; /* Button padding */
+    font-size: 0.9rem; /* Text size */
+    color: var(--clr-white); /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Edit Button */
+button.edit-button {
+    background-color: var(--clr-success); /* Green for Edit */
+}
+
+button.edit-button:hover {
+    background-color: #36c690; /* Darker green on hover */
+}
+
+/* Delete Button */
+button.delete-button {
+    background-color: var(--clr-danger); /* Red for Delete */
+}
+
+button.delete-button:hover {
+    background-color: #e63946; /* Darker red on hover */
+}
+
+/* Responsive Design for Table */
+@media (max-width: 600px) {
+    table {
+        font-size: 0.85rem; /* Smaller font size */
+    }
+
+    button {
+        padding: 6px 10px; /* Reduced padding */
+        font-size: 0.85rem; /* Smaller button text */
+    }
+}

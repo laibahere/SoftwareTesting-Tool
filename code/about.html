@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Software Testing Project</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Container for the About Box */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        /* Title Styling */
+        .title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #4e4e4e;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Underline Styling */
+        .underline {
+            width: 80px;
+            height: 5px;
+            background-color: #111e88;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        /* Description Styling */
+        .description {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin: 20px 0;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .description strong {
+            color: #111e88;
+        }
+
+        /* Team Members Section */
+        .team-title {
+            font-size: 26px;
+            font-weight: 600;
+            color: #111e88;
+            margin: 30px 0 10px;
+            text-align: left;
+        }
+
+        .team-members {
+            list-style-type: none;
+            font-size: 18px;
+            color: #333;
+            text-align: left;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .team-members li {
+            margin: 12px 0;
+        }
+
+        .team-members li strong {
+            color: #4e4e4e;
+        }
+
+        /* Final Note Styling */
+        .note {
+            font-size: 16px;
+            color: #888;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+
+            .description,
+            .team-members li {
+                font-size: 16px;
+            }
+
+            .note {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">About This Project</h1>
+        <div class="underline"></div>
+        <p class="description">
+            This project was created for the <strong>Software Engineering</strong> degree at <strong>UBIT, University of Karachi</strong>, for the <strong>Software Testing</strong> class.
+            <br><br>
+            The project is primarily focused on manual testing, with efforts underway to shift towards automation testing in the future.
+        </p>
+        <h2 class="team-title">Group Members</h2>
+        <ul class="team-members">
+            <li><strong>Laiba Waseem</strong> - Developer</li>
+            <li><strong>Ayesha Qamar</strong> - Team Member</li>
+            <li><strong>Areeba Tanveer</strong> - Team Member</li>
+            <li><strong>Alisha Shehzad</strong> - Team Member</li>
+            <li><strong>Huzaifa Azhar</strong> - Team Member</li>
+            <li><strong>Sir Shahrukh</strong> - Instructor/Supervisor</li> <!-- Added Sir Shahrukh -->
+        </ul>
+        <p class="note">All group members are final-year students at <strong>UBIT, University of Karachi</strong>.</p>
+    </div>
+</body>
+
+</html>

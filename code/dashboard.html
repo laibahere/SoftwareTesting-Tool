@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar Section -->
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <h2>ALPHA <span class="danger">GROUP</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-symbols-outlined">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="#" data-page="dashboard" class="active">
+            <span class="material-symbols-outlined">grid_view</span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="#" data-page="user">
+            <span class="material-symbols-outlined">person_outline</span>
+            <h3>User</h3>
+          </a>
+          <a href="#" data-page="crud">
+            <span class="material-symbols-outlined">assignment</span>
+            <h3>Bug Form</h3>
+          </a>
+          <a href="#" data-page="bug-report">
+            <span class="material-symbols-outlined">report</span>
+            <h3>Bug Report</h3>
+          </a>
+          <a href="#" data-page="about">
+            <span class="material-symbols-outlined">group</span>
+            <h3>About</h3>
+          </a>
+          <a href="logout.html">
+            <span class="material-symbols-outlined">logout</span>
+            <h3>Log Out</h3>
+          </a>
+        </div>
+      </aside>
+
+      <main>
+        <!-- Dashboard Page -->
+        <div id="dashboard" class="page-content">
+          <h1>Dashboard</h1>
+          <p>
+            Welcome to the Dashboard. Here you can manage your system data and
+            access reports.
+          </p>
+        </div>
+
+        <!-- User Page -->
+        <div id="user" class="page-content" style="display: none">
+          <h1>User Management</h1>
+          <p>Manage users, their permissions, and roles here.</p>
+        </div>
+
+        <!-- CRUD Page -->
+        <div id="crud" class="page-content" style="display: none">
+          <h1>Bug Form</h1>
+          <p>This is the form where you can submit new bugs.</p>
+          <!-- Add your form content here -->
+        </div>
+
+        <!-- Bug Report Page -->
+        <div id="bug-report" class="page-content" style="display: none">
+          <h1>Bug Reports</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Severity</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="bugReportTable">
+              <tr>
+                <td>Bug Report 1</td>
+                <td>#101</td>
+                <td>High</td>
+                <td>Open</td>
+                <td><button>Details</button></td>
+              </tr>
+              <tr>
+                <td>Bug Report 2</td>
+                <td>#102</td>
+                <td>Medium</td>
+                <td>Resolved</td>
+                <td><button>Details</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page-content" style="display: none">
+          <h1>About Us</h1>
+          <p>
+            Welcome to the About page. Here you can learn more about the
+            organization.
+          </p>
+        </div>
+      </main>
+
+      <!-- Profile Section -->
+      <div class="right">
+        <div class="top">
+          <button id="menu-bar">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="theme-toggler">
+            <span class="material-symbols-outlined active" id="light-mode-icon"
+              >light_mode</span
+            >
+            <span class="material-symbols-outlined" id="dark-mode-icon"
+              >dark_mode</span
+            >
+          </div>
+          <div class="profile">
+            <div class="info">
+              <p><b>Laiba</b></p>
+              <p>Admin</p>
+            </div>
+            <div class="profile-pic">
+              <img src="images (1).jfif" alt="Profile Picture" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

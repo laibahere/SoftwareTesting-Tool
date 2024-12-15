@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Report Form</title>
+    <!-- Link to external stylesheet for form styling -->
+    <link rel="stylesheet" href="bug-report.css">
+    <!-- Include libraries for exporting to Excel and PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <h1>Bug Report Form</h1>
+    <!-- Bug report submission form -->
+    <form id="bug-report-form">
+        <table>
+            <!-- Input field for Bug ID -->
+            <tr>
+                <th>ID</th>
+                <td><input type="text" id="bug-id" name="bug-id" placeholder="Enter Bug ID" required></td>
+            </tr>
+            <!-- Dropdown to select the status of the bug -->
+            <tr>
+                <th>Status</th>
+                <td>
+                    <select id="status" name="status" required>
+                        <option value="">Select Status</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                        <option value="Closed">Closed</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- Dropdown to select the platform where the bug was encountered -->
+            <tr>
+                <th>Platform</th>
+                <td>
+                    <select id="platform" name="platform" required>
+                        <option value="">Select Platform</option>
+                        <option value="Web">Web</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Desktop">Desktop</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- Dropdown to select the severity level of the bug -->
+            <tr>
+                <th>Severity</th>
+                <td>
+                    <select id="severity" name="severity" required>
+                        <option value="">Select Severity</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Critical">Critical</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- Input field for module name where the bug occurred -->
+            <tr>
+                <th>Module</th>
+                <td><input type="text" id="module" name="module" placeholder="Enter Module Name" required></td>
+            </tr>
+            <!-- Input field for the "From" date -->
+            <tr>
+                <th>From Date</th>
+                <td><input type="date" id="from-date" name="from-date" required></td>
+            </tr>
+            <!-- Input field for the "To" date -->
+            <tr>
+                <th>To Date</th>
+                <td><input type="date" id="to-date" name="to-date" required></td>
+            </tr>
+        </table>
+        <!-- Button to submit the bug report -->
+        <button type="button" id="submit-btn">Submit Bug Report</button>
+    </form>
+
+    <!-- Table to display submitted bug reports -->
+    <table id="report-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Platform</th>
+                <th>Severity</th>
+                <th>Module</th>
+                <th>From Date</th>
+                <th>To Date</th>
+                <!-- Column for actions (Edit/Delete) -->
+                <th>Actions</th> 
+            </tr>
+        </thead>
+        <tbody></tbody> <!-- Body of the table where data rows will be added -->
+    </table>
+
+    <!-- Export buttons to download data as PDF or Excel -->
+    <div class="export-buttons">
+        <button id="export-pdf-btn">Export PDF</button>
+        <button id="export-excel-btn">Export Excel</button>
+    </div>
+
+    <!-- Link to the JavaScript file that handles form submission, editing, deletion, and exports -->
+    <script src="bug-report.js"></script>
+</body>
+</html>

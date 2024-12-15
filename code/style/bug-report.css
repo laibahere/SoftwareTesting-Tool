@@ -1,0 +1,126 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f7fc;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #7380ec;
+    color: white;
+}
+
+/* Input Styling */
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #4c63af;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #4c63af;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #111e88; /* Darker shade of green on hover */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Export Buttons */
+.export-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.export-buttons button {
+    background-color: #0056b3;
+    margin: 0 10px;
+}
+
+.export-buttons button:hover {
+    background-color: #111e88;
+}
+
+/* Table Row Hover Effect */
+#report-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Actions Column Styling */
+#report-table tbody td button {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+.edit-button {
+    background-color: #ff9800;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #f57c00;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Error Message Styling */
+.alert {
+    color: red;
+    font-weight: bold;
+}
